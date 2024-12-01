@@ -1,0 +1,18 @@
+.env
+
+zig-out/
+
+# Zig cache
+.zig-cache/
+
+# Dependencies
+deps/
+
+# Editor and IDE files
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
