@@ -1,5 +1,7 @@
 .env
 
+**/input.txt
+
 zig-out/
 
 # Zig cache
