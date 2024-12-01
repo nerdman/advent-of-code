@@ -1,4 +1,6 @@
 # Don't commit personal input.txt files at request of AoC
+.env
+
 **/inputs/*.txt
 
 **/target
