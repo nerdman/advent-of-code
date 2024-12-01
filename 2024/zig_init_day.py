@@ -145,5 +145,5 @@ if __name__ == "__main__":
         day = int(sys.argv[1])
 
     setup_aoc_day(year, day)
-    print(f"\nSetup complete for Advent of Code {year} Day {day}")
+    print(f"\n🎄🎄🎄 Setup complete for Advent of Code {year} Day {day} 🎄🎄🎄")
 
