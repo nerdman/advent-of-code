@@ -30,7 +30,7 @@ fn solvePart1(allocator: std.mem.Allocator, input: []const u8) !u64 {
 
             try levels.append(level);
         }
-        const safe = check_report(levels.items, null);
+        const safe = checkReport(levels.items, null);
         if (safe) {
             total += 1;
         }
@@ -54,13 +54,13 @@ fn solvePart2(allocator: std.mem.Allocator, input: []const u8) !u64 {
             try levels.append(level);
         }
 
-        var safe = check_report(levels.items, null);
+        var safe = checkReport(levels.items, null);
 
         // If the first pass is unsafe, see if removing any single level makes
         // the report safe
         if (!safe) {
             for (0..levels.items.len) |i| {
-                if (check_report(levels.items, i)) {
+                if (checkReport(levels.items, i)) {
                     safe = true;
                     break;
                 }
@@ -75,7 +75,7 @@ fn solvePart2(allocator: std.mem.Allocator, input: []const u8) !u64 {
     return total;
 }
 
-fn check_report(levels: []const i64, skip: ?usize) bool {
+fn checkReport(levels: []const i64, skip: ?usize) bool {
     var prev_increasing: ?bool = null;
     var prev_val: ?i64 = null;
 
